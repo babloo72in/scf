@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Weather Forecast</h1>
+    <form id="search">
+      <input id="city" type="text" placeholder="Search a city (e.g. London)" autocomplete="off" required>
+      <button type="submit">Search</button>
+      <button type="button" id="locate" title="Use my location">📍</button>
+      <select id="units" aria-label="Units">
+        <option value="celsius">°C</option>
+        <option value="fahrenheit">°F</option>
+      </select>
+    </form>
+    <p id="status" role="status"></p>
+
+    <section id="current" hidden>
+      <div class="place" id="place"></div>
+      <div class="now">
+        <span class="icon" id="icon"></span>
+        <span class="temp" id="temp"></span>
+      </div>
+      <div class="desc" id="desc"></div>
+      <div class="meta" id="meta"></div>
+    </section>
+
+    <section id="forecast" hidden>
+      <h2>7-day forecast</h2>
+      <div id="days" class="days"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
